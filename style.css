@@ -83,6 +83,7 @@ p {
 
 .payment-options {
     display: none;
+    color: green;
     margin-top: 10px;
 }
 
