@@ -67,6 +67,10 @@ function handleFormSubmit(event) {
     }
 }
 
+window.onload = function() {
+    document.getElementById("payment-options").style.display = "none";
+};
+
 function setPaymentMethod(method) {
     selectedPaymentMethod = method;
     document.getElementById("selected-payment").textContent = "Selected Payment Method: " + method;
