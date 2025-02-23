@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Rammetto+One&display=swap');
+
+body {
+    background: #FBFFE4 !important;
+}
+
+.bg-body-tertiary {
+    width: 25%;
+    height: 6vh;
+    /*left: 35%;*/
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    background: #B3D8A8 !important;
+    border-radius:  5vh;
+    padding-left: 1vw;
+}
+
+.navbar-brand {
+    font-family: "Rammetto One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+}
+
+.nav-link {
+    font-family: "Lexend", serif;
+    font-weight: 500;
+    font-size: 0.75vw;
+}
+
+a {
+    color: #3D8D7A !important;
+}
+
+.title {
+    font-family:  "Rammetto One", serif;
+    text-align: center;
+    color: #3D8D7A;
+    margin-bottom: 7.5vh;
+    font-size: 2vw;
+}
+
+p {
+    font-family: "Lexend", serif;
+    font-weight: 500;
+    color: #3D8D7A;
+}
+
+.fastFood {
+    width: 15%;
+    height: auto;
+    /* flex: 0; */
+    float: right;
+    margin-right: 5vw;
+    border-radius: 2vw;
+}
+
+#imgDescContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 5vh; */
+}
+
+.desc {
+    /* flex: 1; */
+    text-align: left;
+    float: left;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: .8vw;
+    position: relative;
+}
+
+#map {
+    position: relative !important;
+    left: 10vw;
+}
