@@ -7,6 +7,7 @@ const hashMap = {
   };  
 
 function populateTable(map) {
+    alert("populate table map");
     const tableBody = document.getElementById("hashmap-table");
     tableBody.innerHTML = ""; // Clear existing rows
 
