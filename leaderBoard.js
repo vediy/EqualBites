@@ -1,11 +1,19 @@
 var hashMap = new Map();
 
+// Replace this with your Gist URL
+// const gistUrl = 'https://gist.githubusercontent.com/pranavmal/cdf2a6dde791e2d471306e2e62faf075/raw/f26eb5238cede57e1bed448141409779a2635401/EqualBitesLeaderboard.txt';
+
+// Replace this with your Gist ID
 const gistId = 'cdf2a6dde791e2d471306e2e62faf075';
+
+// URL for the Gist API
 const gistUrl = `https://api.github.com/gists/${gistId}`;
 
+// Fetch the Gist content
 fetch(gistUrl)
   .then(response => response.json())
   .then(data => {
+    // Access the file contents
     const files = data.files;
     for (const filename in files) {
       if (files.hasOwnProperty(filename)) {
@@ -25,20 +33,42 @@ fetch(gistUrl)
     console.error('Error fetching the Gist:', error);
   });
 
+
+
+// // Fetch the Gist content
+// fetch(gistUrl)
+//   .then(response => response.text())
+//   .then(content => {
+//     // Ensure we handle all parts of the content
+//     console.log(content);
+//     const items = content.match(/[^ ]+:[^ ]+/g);
+//     items.forEach((item) => {
+//       const [key, value] = item.split(':');
+//       hashMap.set(key, value);
+//     });
+
+//     // Call populateTable after the hashMap is populated
+//     populateTable();
+//   })
+//   .catch(error => {
+//     console.error('Error fetching the Gist:', error);
+//   });
+
 function populateTable() {
     const tableBody = document.getElementById("hashmap-table");
-    tableBody.innerHTML = "";
+    tableBody.innerHTML = ""; // Clear existing rows
 
+    // Sort the hashMap by values in descending order
     const sortedEntries = Array.from(hashMap.entries()).sort((a, b) => b[1] - a[1]);
 
     for (const [key, value] of sortedEntries) {
         const row = document.createElement("tr");
 
         const keyCell = document.createElement("td");
-        keyCell.textContent = key;
+        keyCell.textContent = key; // Display name as plain text
 
         const valueCell = document.createElement("td");
-        valueCell.textContent = value;
+        valueCell.textContent = value; // Display score as plain text
 
         row.appendChild(keyCell);
         row.appendChild(valueCell);
@@ -49,7 +79,7 @@ function populateTable() {
 let selectedPaymentMethod = null;
 
 function handleFormSubmit(event) {
-    event.preventDefault();
+    event.preventDefault(); // Prevent default form submission
 
     const cardNumber = document.getElementById("card-number").value.trim();
     const nameInput = document.getElementById("name");
@@ -69,9 +99,13 @@ function handleFormSubmit(event) {
     }
 
     if (name && !isNaN(numberToAdd)) {
+        // Update or add the key-value pair in the HashMap
         hashMap.set(name, numberToAdd);
+
+        // Clear and repopulate the table with sorted values
         populateTable();
 
+        // Clear the form inputs
         nameInput.value = "";
         numberInput.value = "";
     }
@@ -83,7 +117,7 @@ function handleFormSubmit(event) {
         .join(' ');
 
     console.log(mapString);
-
+  
     const gistId = 'cdf2a6dde791e2d471306e2e62faf075';
 
     // New content to replace the existing Gist content
@@ -96,7 +130,7 @@ function handleFormSubmit(event) {
     const options = {
         method: 'PATCH',
         headers: {
-            'Authorization': `token ${{ secrets.API_KEY }}`,
+            'Authorization': `token ${{secrets.API_KEY}}`,
             'Accept': 'application/vnd.github.v3+json',
             'Content-Type': 'application/json'
         },
