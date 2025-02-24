@@ -78,24 +78,59 @@ p {
 }
 
 .payment-container {
-    margin-top: 20px;
+    margin-top: 2vh;
 }
 
 .payment-options {
-    display: block;
-    color: green;
-    margin-top: 10px;
+    margin-top: 1vh;
 }
 
 .payment-options button {
-    margin: 5px;
-    padding: 10px;
-    font-size: 16px;
+    margin: .5vh;
+    padding: .75vh;
+    font-size: 1.4vh;
     cursor: pointer;
 }
 
 #selected-payment {
-    margin-top: 10px;
+    margin-top: 1vh;
     font-weight: bold;
     color: green;
+}
+
+#donate-container {
+    text-align: center;
+    color: #3D8D7A;
+    font-family: "Lexend", serif;
+}
+
+#donate-leaderboard {
+    margin: 0 auto 5vh auto;
+}
+
+#paypal-btn:hover {
+    background-color: #00457C;
+    border-color: #00457C;
+}
+
+#paypal-btn {
+    background-color: #0079C1;
+    border-color: #0079C1;
+}
+
+#cashapp-btn {
+    background-color: #00D632;
+    border-color: #00D632;
+}
+
+#cashapp-btn:hover {
+    background-color: #00A82D;
+    border-color: #00A82D;
+}
+
+input {
+    width: 20vw !important;
+    display: inline-block !important;
+    margin-left: .25vw !important;
+    background-color: #B3D8A8 !important;
 }
