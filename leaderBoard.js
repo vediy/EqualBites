@@ -35,12 +35,12 @@ function sortHashMapByValue(map) {
     }          
 
 function handleFormSubmit(event) {
+    alert("something");
     event.preventDefault(); // Prevent default form submission
 
     const cardNumber = document.getElementById("card-number").value.trim();
     const nameInput = document.getElementById("name");
     const numberInput = document.getElementById("number");
-    alert("Something");
     
     const name = nameInput.value.trim();
     const numberToAdd = parseInt(numberInput.value, 10);
