@@ -35,7 +35,6 @@ function sortHashMapByValue(map) {
     }          
 
 function handleFormSubmit(event) {
-    alert("something");
     //event.preventDefault(); Prevent default form submission
 
     const cardNumber = document.getElementById("card-number").value.trim();
@@ -56,6 +55,7 @@ function handleFormSubmit(event) {
     }
     
     if (name && !isNaN(numberToAdd)) {
+        alert("something");
         // Update or add the key-value pair in the HashMap
         hashMap[name] = numberToAdd;
     
