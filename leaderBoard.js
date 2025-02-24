@@ -1,10 +1,10 @@
 
-let hashMap = JSON.parse(localStorage.getItem("leaderboard")) || {
-"Bob Banks": 42,
-"Somebody": 7,
-"Jane Smith": 109,
-"Anonymous": 721
-};
+const hashMap = {
+    "john_doe": 42,
+    "jane_smith": 35,
+    "user123": 67,
+    "admin": 99
+  };  
 
 function populateTable(map) {
     const tableBody = document.getElementById("hashmap-table");
@@ -68,10 +68,11 @@ function handleFormSubmit(event) {
 }
 
 function setPaymentMethod(method) {
-    document.getElementById('selected-payment').innerText = `Selected payment method: ${method}`;
+    selectedPaymentMethod = method;
+    document.getElementById("selected-payment").textContent = "Selected Payment Method: " + method;
 }
 
 populateTable(hashMap);
 
-let form = document.getElementById("update-form");
+const form = document.getElementById("update-form");
 form.addEventListener("submit", handleFormSubmit);
