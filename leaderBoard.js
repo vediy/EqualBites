@@ -68,8 +68,7 @@ function handleFormSubmit(event) {
 }
 
 function setPaymentMethod(method) {
-    selectedPaymentMethod = method;
-    document.getElementById("selected-payment").textContent = "Selected Payment Method: " + method;
+    document.getElementById('selected-payment').innerText = `Selected payment method: ${method}`;
 }
 
 populateTable(hashMap);
