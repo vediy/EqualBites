@@ -73,5 +73,5 @@ function setPaymentMethod(method) {
 
 populateTable(hashMap);
 
-const form = document.getElementById("update-form");
+let form = document.getElementById("update-form");
 form.addEventListener("submit", handleFormSubmit);
