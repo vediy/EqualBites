@@ -7,7 +7,6 @@ const hashMap = {
   };  
 
 function populateTable(map) {
-    alert("populate table map");
     const tableBody = document.getElementById("hashmap-table");
     tableBody.innerHTML = ""; // Clear existing rows
 
@@ -27,6 +26,7 @@ function populateTable(map) {
         row.appendChild(valueCell);
         tableBody.appendChild(row);
     }
+        alert("populate table map");
 }
 
 let selectedPaymentMethod = null;
