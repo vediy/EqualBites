@@ -1,5 +1,5 @@
 
-const hashMap = {
+let hashMap = JSON.parse(localStorage.getItem("leaderboard")) || {
 "Bob Banks": 42,
 "Somebody": 7,
 "Jane Smith": 109,
